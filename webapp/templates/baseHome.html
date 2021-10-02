@@ -1,54 +1,52 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindRisers</title>
-    <link rel = "shortcut icon" href = "{% static 'codeacademy.png' %}">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <style>
-        body{
-            overflow: hidden;
-        }
-        div.absolute1 {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center; 
-        }
-        div.bannerText {
-            bottom: -150px;
-        }
-        div.element1 {
-            top: 60%;
-        }
-    </style>
-</head>
-<body>
-   
-    <div class = "open">
-		</div>
-		<section>
-			<div class="header">
-                <img src = "{% static 'codeacademy.png' %}" width="100px" height="100px">
-			</div>
-			<div class="bannerText">
-				<h2>MindRisers</h2><br>
-				<p>We want to create a world where anyone can build something meaningful with technology, and everyone has the learning tools, resources, and opportunities to do so. Code contains a world of possibilities — all that’s required is the curiosity and drive to learn. At Codecademy, we are committed to empowering all people, regardless of where they are in their coding journeys, to continue to learn, grow, and make an impact on the world around them.</p>
-			</div>
-			<div class="element1"></div>
-			<div class="element2"></div>
-        </section>
-        <div class = "absolute1">
-            <h3>Contact Us</h3>
-            <p>Email: mindrisers@gmail.com</p>
-        </div>
-    </body>
-</html>
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>MindRisers</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel = "icon" href = "{% static 'logo.png' %}">
+ </head>
+ <body>
+  <div class="open">
+   <div class="layer"></div>
+   <div class="layer"></div>
+  </div>
+  <section>
+   <div class="header">
+    <img class = "header-img" src = "{% static 'logo.png' %}" alt="logo">
+    <ul>
+     <li>
+      <a href="{% url 'baseHome' %}" class="active">Home</a>
+     </li>
+     <li>
+      <a href="{% url 'aboutus' %}">About</a>
+     </li>
+     <li>
+      <a href="{% url 'register' %}">Register</a>
+     </li>
+     <li>
+      <a href="{% url 'login' %}">Login</a>
+     </li>
+    </ul>
+   </div>
+   <div class="bannerText">
+    <h2>MindRisers</h2><br>
     
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   </div>
+   <div class="element1"></div>
+   <div class="element2"></div>
+  </section>
+  <div class = "footer">
+    <h3>Contact Us</h3>
+    <p>Email: mindrisers@gmail.com</p>
+  </div>
+ </body>
+</html>
