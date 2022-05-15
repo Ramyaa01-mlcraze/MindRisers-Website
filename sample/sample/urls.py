@@ -1,4 +1,4 @@
-"""webapp URL Configuration
+"""sample URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,13 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from basewebsite import views as bw
-from chatapplication import views as chat
-from paymentGateway import views as pay
-from dashboard import views as dh
 
 urlpatterns = [
-    path('',include('basewebsite.urls')),
+    path('',include('sample1.urls')),
     path('admin/', admin.site.urls),
-    path('test_file',bw.baseHome)
 ]

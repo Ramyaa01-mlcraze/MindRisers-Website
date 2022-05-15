@@ -9,8 +9,3 @@ def register(request):
     return render(request,'register.html')
 def login(request):
     return render(request,'login.html')
-def register_teacher(request):
-    return render(request,'register-teacher.html')
-def register_student(request):
-    return render(request,'register-student.html')
-

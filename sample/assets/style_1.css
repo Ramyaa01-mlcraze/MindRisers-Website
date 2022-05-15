@@ -5,71 +5,13 @@ body
  padding: 0;
  min-height: 100vh;
  font-family: 'PT Sans Narrow', sans-serif;
+ overflow:hidden;
 }
 
-.header-img {
-    width: 100px;
-    height : 100px;
-    float:left;
-    margin-top: 30px;
-}
-.open
-{
- position: fixed;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- pointer-events: none;
- z-index: 10000;
-}
-.open .layer
-{
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- transform-origin: top;
- animation: open 1s ease-in-out forwards;
-}
-.open .layer:nth-child(1)
-{
- background: #000;
- z-index: 2;
-}
-.open .layer:nth-child(2)
-{
- background: #03a9f4;
- animation-delay: 1s;
- z-index: 1;
-}
-@keyframes open
-{
- 0%
- {
-  transform: scaleY(1);
- }
- 100%
- {
-  transform: scaleY(0);
- }
-}
-section
-{
- position: absolute;
- width: 100%;
- height: 100%;
- background: #fff;
- display: grid;
- justify-content: center;
- align-items: center;
- overflow: hidden;
-}
 .bannerText
 {
  position: absolute;
- top: 50%;
+ top: 60%;
  left: 10%;
  transform: translateY(-50%);
  max-width: 700px;
@@ -98,6 +40,7 @@ section
  font-size: 3em;
  animation-delay: 3s;
 }
+
 .bannerText h2:before,
 .bannerText h3:before
 {
@@ -144,7 +87,8 @@ section
  font-weight: 400;
  font-size: 1.2em;
  animation: fadeIn 1s linear forwards;
- animation-delay: 5s;
+ animation-delay: 3s;
+ text-align: justify;
 }
 @keyframes fadeIn
 {
@@ -170,7 +114,7 @@ section
  font-size: 1.2em;
  letter-spacing: 1px;
  animation: fadeInBottom 0.5s linear forwards;
- animation-delay: 5.5s;
+ animation-delay: 4.5s;
 }
 @keyframes fadeInBottom
 {
@@ -186,45 +130,6 @@ section
  }
 }
 
-.sci
-{
- position: absolute;
- bottom: 15px;
- right: 30px;
- display: flex;
- flex-direction: column;
-}
-.sci li
-{
- opacity: 0;
- list-style: none;
- float:right;
- right:30px;
- padding: 10px 0;
- padding-left: 300px;
- text-align: center;
- animation: fadeInBottom 0.5s linear forwards;
-}
-.header ul li:nth-child(1),
-.sci li:nth-child(1)
-{
- animation-delay: 5s;
-}
-.header ul li:nth-child(2),
-.sci li:nth-child(2)
-{
- animation-delay: 5.25s;
-}
-.header ul li:nth-child(3),
-.sci li:nth-child(3)
-{
- animation-delay: 5.5s;
-}
-.header ul li:nth-child(4),
-.sci li:nth-child(4)
-{
- animation-delay: 5.75s;
-}
 
 @keyframes fadeInRight
 {
@@ -249,7 +154,7 @@ section
  height: 250px;
  border: 40px solid #000;
  animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
- animation-delay: 7s;
+ animation-delay: 4s;
 }
 .element2
 {
@@ -261,7 +166,7 @@ section
  height: 50px;
  border: 2px solid #000;
  animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
- animation-delay: 7s;
+ animation-delay: 4s;
 }
 @keyframes rotate
 {
@@ -275,12 +180,3 @@ section
  }
 } 
 
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center; 
-}
