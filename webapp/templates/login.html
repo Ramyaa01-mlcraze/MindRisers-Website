@@ -209,26 +209,30 @@ footer{
         <div class="title">
             <p>Sign in to MindRisers</p>
         </div>
+
         <div class="form">
-            <div class="input_field">
-                <label>Username or email address</label>
-                <input type="text" id = "email" name = "email" class="input">
-            </div>
-            <div class="input_field">
-                <label>Password</label>
-                <input type="password" id="pwd" name = "password" class="input">
-            </div>
-            <div class="input_field">
-                <label for="role">Who are you ?</label>
-                <select id="role" name="role" style="width:100%">
-                  <option selected disabled hidden style='display: none' value=''></option>
-                  <option value="Teacher">Teacher</option>
-                  <option value="Student">Student</option>
-                </select>
-            </div>
-            <div class="btn">
-                <input type="submit" value="Sign in" class="sign_btn">
-            </div>
+            <form action="logincheck" method = "post">
+                {% csrf_token %}
+                <div class="input_field">
+                    <label>Username or email address</label>
+                    <input type="text" id = "email" name = "email" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Password</label>
+                    <input type="password" id="pwd" name = "password" class="input">
+                </div>
+                <div class="input_field">
+                    <label for="role">Who are you ?</label>
+                    <select id="role" name="role" style="width:100%">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Student">Student</option>
+                    </select>
+                </div>
+                <div class="btn">
+                    <button type="submit" class="sign_btn">Sign in</button>
+                </div>
+            </form>
         </div>
         <div class="create_act">
             <p>New to MindRisers? <a href="{% url 'register' %}">Create an account.</a></p>

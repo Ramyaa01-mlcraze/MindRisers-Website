@@ -209,91 +209,95 @@ footer{
         <div class = "title">
             <p>Sign up to MindRisers</p>
         </div>
-        <form class="form">
-            <div class = "input_field">
-                <label>First Name<span class = "required-field"></span></label>
-                <input type = "text" id = "fname" name = "firstname" class = "input" required>
-            </div>
-            <div class = "input_field">
-               <label>Last Name<span class = "required-field"></span></label>
-                <input type = "text" id = "lname" name = "lastname" class = "input" required>
-            </div> 
-            <div class = "input_field">
-                <label>Middle Name</label>
-                 <input type = "text" id= "mname" name = "middlename" class = "input">
-            </div> 
-            <div class = "input_field">
-                <label>Email<span class = "required-field"></span></label>
-                 <input type = "text" id="mail" name = "email" class = "input" required>
-            </div> 
-            <div class = "input_field">
-                <label>Password<span class = "required-field"></span></label>
-                 <input type = "password" id="pwd" name="password" class = "input" required>
-            </div> 
-            <div class = "input_field">
-                <label>Re - enter Password<span class = "required-field"></span></label>
-                 <input type = "password" id ="rpwd" name="repassword" class = "input" required>
-            </div> 
-            <div class="input_field">
-                <label for="study">Current study<span class = "required-field"></span></label>
-                <select id="study" name="study" required style="width:100%;padding: 6px 8px;border: 1px solid #d1d5da;border-radius: 3px;">
-                  <option selected disabled hidden style='display: none' value=''></option>
-                  <option value="B.E">B.E</option>
-                  <option value="B.Tech">B.Tech</option>
-                  <option value="M.E">M.E</option>
-                  <option value="M.Tech">M.Tech</option>
-                  <option value="B.Sc">B.Sc</option>
-                  <option value="M.Sc">M.Sc</option>
-                  <option value="B.CA">B.CA</option>
-                  <option value="M.CA">M.CA</option>
-                </select>
-            </div>
-            <div class = "input_field">
-                <label>Year of Passing</label>
-                <input type = "month" class = "input" id="yop" name="YOP">
-            </div>
-            <div class = "input_field">
-                <label>Phone Number<span class = "required-field"></span></label>
-                <input type="number" class = "input" id="no" name="number" required>
-            </div>
-            <div class = "input_field">
-                <label>CGPA (optional)</label>
-                <input type = "number" class = "input" id="cgpa" name="CGPA">
-            </div>
-            <div class="input_field">
-                <label>College Name</label>
-                <input type="text" class="input" id="cname" name="College">
-            </div>
-            <div class="input_field">
-                <label>Current City</label>
-                <input type="text" class="input" id="curcity" name="City">
-            </div>
-            <div class="input_field">
-                <label>Current state</label>
-                <input type="text" class="input" id="curstate" name="State">
-            </div>
-            <div class="input_field">
-                <label for="branch">Current study<span class = "required-field"></span></label>
-                <select id="branch" name="branch" required style="width:100%;padding: 6px 8px;border: 1px solid #d1d5da;border-radius: 3px;">
-                  <option selected disabled hidden style='display: none' value=''></option>
-                  <option value="CSE">CSE</option>
-                  <option value="CS">CS</option>
-                  <option value="CE">CE</option>
-                  <option value="IT">IT</option>
-                  <option value="ECE">ECE</option>
-                  <option value="EEE">EEE</option>
-                  <option value="E&I">E&I</option>
-                  <option value="Telecom">Telecom</option>
-                </select>
-            </div>
-            <div class="input_field">
-                <label for="AOI">Area of Interest<span class = "required-field"></span></label>
-                <textarea id = "AOI" name="Interest" required></textarea>
-            </div>
-            <div class="btn">
-                <input type="submit" value="Sign up" class="sign_btn">
-            </div>
-        </form>
+        <div class="form">
+            <form action="register_student_db" method = "post">
+                {% csrf_token %}
+                <div class = "input_field">
+                    <label>First Name<span class = "required-field"></span></label>
+                    <input type = "text" id = "fname" name = "firstname" class = "input" required>
+                </div>
+                <div class = "input_field">
+                <label>Last Name<span class = "required-field"></span></label>
+                    <input type = "text" id = "lname" name = "lastname" class = "input" required>
+                </div> 
+                <div class = "input_field">
+                    <label>Middle Name</label>
+                    <input type = "text" id= "mname" name = "middlename" class = "input">
+                </div> 
+                <div class = "input_field">
+                    <label>Email<span class = "required-field"></span></label>
+                    <input type = "text" id="mail" name = "email" class = "input" required>
+                </div> 
+                <div class = "input_field">
+                    <label>Password<span class = "required-field"></span></label>
+                    <input type = "password" id="pwd" name="password" class = "input" required>
+                </div> 
+                <div class = "input_field">
+                    <label>Re - enter Password<span class = "required-field"></span></label>
+                    <input type = "password" id ="rpwd" name="repassword" class = "input" required>
+                </div> 
+                <div class="input_field">
+                    <label for="study">Current study<span class = "required-field"></span></label>
+                    <select id="study" name="study" required style="width:100%;padding: 6px 8px;border: 1px solid #d1d5da;border-radius: 3px;">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option value="B.E">B.E</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.E">M.E</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="M.Sc">M.Sc</option>
+                    <option value="B.CA">B.CA</option>
+                    <option value="M.CA">M.CA</option>
+                    </select>
+                </div>
+                <div class = "input_field">
+                    <label>Year of Passing</label>
+                    <input type = "month" class = "input" id="yop" name="YOP">
+                </div>
+                <div class = "input_field">
+                    <label>Phone Number<span class = "required-field"></span></label>
+                    <input type="number" class = "input" id="no" name="number" required>
+                </div>
+                <div class = "input_field">
+                    <label>CGPA (optional)</label>
+                    <input type = "number" class = "input" id="cgpa" name="CGPA">
+                </div>
+                <div class="input_field">
+                    <label>College Name</label>
+                    <input type="text" class="input" id="cname" name="College">
+                </div>
+                <div class="input_field">
+                    <label>Current City</label>
+                    <input type="text" class="input" id="curcity" name="City">
+                </div>
+                <div class="input_field">
+                    <label>Current state</label>
+                    <input type="text" class="input" id="curstate" name="State">
+                </div>
+                <div class="input_field">
+                    <label for="branch">Current study<span class = "required-field"></span></label>
+                    <select id="branch" name="branch" required style="width:100%;padding: 6px 8px;border: 1px solid #d1d5da;border-radius: 3px;">
+                    <option selected disabled hidden style='display: none' value=''></option>
+                    <option value="CSE">CSE</option>
+                    <option value="CS">CS</option>
+                    <option value="CE">CE</option>
+                    <option value="IT">IT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="E&I">E&I</option>
+                    <option value="Telecom">Telecom</option>
+                    </select>
+                </div>
+                <div class="input_field">
+                    <label for="AOI">Area of Interest<span class = "required-field"></span></label>
+                    <textarea id = "AOI" name="Interest" required></textarea>
+                </div>
+            
+                <div class="btn">
+                    <button type="submit" class="sign_btn">Sign up</button>
+                </div>
+            </form>
+    </div>
     </div>
     <footer>
         <h3>Contact Us</h3>

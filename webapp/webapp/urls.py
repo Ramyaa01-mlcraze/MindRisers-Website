@@ -23,5 +23,6 @@ from dashboard import views as dh
 urlpatterns = [
     path('',include('basewebsite.urls')),
     path('admin/', admin.site.urls),
-    path('test_file',bw.baseHome)
+    path('test_file',bw.baseHome),
+    path('',include('dashboard.urls'))
 ]
