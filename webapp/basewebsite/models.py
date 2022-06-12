@@ -1,7 +1,7 @@
 from djongo import models
 
 # Create your models here.
-class User(models.Model):
+'''class User(models.Model):
     firstname = models.CharField(max_length=100)
     lastname = models.CharField(max_length=100)
     middlename = models.CharField(max_length=100)
@@ -30,4 +30,4 @@ class TeacherDetails(models.Model):
     dept = models.CharField(max_length=100)
     Specialization = models.CharField(max_length=500)
     display_name = models.CharField(max_length=500)
-    user_details=models.JSONField()
+    user_details=models.JSONField()'''

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import TeacherDetails, User
+#from .models import TeacherDetails, User
 
 
 # Create your views here.
@@ -16,7 +16,7 @@ def register_teacher(request):
     return render(request,'register-teacher.html')
 def register_student(request):
     return render(request,'register-student.html')
-def logincheck(request):
+'''def logincheck(request):
     username = request.POST['email']
     password = request.POST['password']
     role = request.POST['role']
@@ -59,5 +59,5 @@ def register_teacher_db(request):
     display_name = request.POST['display_name']
     reg = TeacherDetails(firstname = firstname,lastname=lastname,middlename =middlename,email=email,password=password,qual=qual,pnumber=pnumber,experience=experience,city=city,state=state,dept=dept,Specialization=Specialization,display_name=display_name)
     reg.save()
-    return HttpResponse("Registration Done")
+    return HttpResponse("Registration Done")'''
 
