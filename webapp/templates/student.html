@@ -347,7 +347,12 @@ img {vertical-align:-200px;}
 .button1 {
   border-radius: 60px;
 }
-
+.button2{
+  position: relative;
+}
+.wrapper{
+  text-align: center;
+}
 .mycard{
   margin: 0;
   padding: 0;
@@ -548,10 +553,10 @@ footer{
             <a href="#">Wallet Refill</a>
            </li>
            <li>
-            <a href="#" >0 MindCoins</a>
+            <a href="#" >100 MindCoins</a>
            </li>
            <li>
-            <a href = "#"><i class="fa-solid fa-user-graduate" style="font-size: 24px;"></i></a>
+            <a href = "{% url 'profile_student' %}"><i class="fa-solid fa-user-graduate" style="font-size: 24px;"></i></a>
            </li>
           </ul>
     </header> 
@@ -648,6 +653,9 @@ footer{
       <br>
       <br>
       <div class="parentContainer">
+        <div class="wrapper">
+          <a href="#"><button class="button1 button1 button2">CLICK HERE TO BOOK ONLINE CLASS</button></a>
+        </div>
         <button class="button1 button1">INSTRUCTORS</button>
         <h2>Expert Instructors</h2>
       </div>

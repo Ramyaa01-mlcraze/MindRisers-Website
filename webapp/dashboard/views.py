@@ -7,6 +7,41 @@ def student_dashboard(request):
     return render(request,'student.html')
 def teacher_dashboard(request):
     return render(request,'teacher.html')
+def profile_student(request):
+    email=request.session['useremail']
+    res=User.objects.all()
+    for r in res:
+        if(r.email==email):
+            firstname=r.firstname
+            lastname=r.lastname
+            middlename=r.middlename
+            study=r.study
+            YOP=r.YOP
+            number=r.number
+            CGPA=r.CGPA
+            College=r.College
+            City=r.City
+            State=r.State
+            branch=r.branch
+            Interest=r.Interest
+    return render(request,'profile-student.html',{'firstname':firstname,'lastname':lastname,'middlename':middlename,'email':email,'study':study,'YOP':YOP,'number':number,'CGPA':CGPA,'College':College,'City':City,'State':State,'branch':branch,'Interest':Interest})
+def profile_teacher(request):
+    email=request.session['useremail']
+    res=TeacherDetails.objects.all()
+    for r in res:
+        if(r.email==email):
+            firstname=r.firstname
+            lastname=r.lastname
+            middlename=r.middlename
+            qual=r.qual
+            experience=r.experience
+            pnumber=r.pnumber
+            city=r.city
+            state=r.state
+            dept=r.dept
+            Specialization=r.Specialization
+            display_name=r.display_name
+    return render(request,'profile-teacher.html',{'firstname':firstname,'lastname':lastname,'middlename':middlename,'email':email,'qual':qual,'display_name':display_name,'pnumber':pnumber,'experience':experience,'dept':dept,'city':city,'state':state,'Specialization':Specialization})
 def logincheck(request):
     username = request.POST['email']
     password = request.POST['password']
