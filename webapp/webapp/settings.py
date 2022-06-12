@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = secrets.SECRET_KEY
-RAZOR_KEY_ID = 'rzp_test_AjjsBG7cIqHLIp'
-RAZOR_KEY_SECRET = 'O3k2mii2hu6WKh0wzyLz55Pp'
+RAZOR_KEY_ID = 'rzp_test_JG71LdcfCx9gn4'
+RAZOR_KEY_SECRET = 'R766ZumIMZd049tH1DAlDbDa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
