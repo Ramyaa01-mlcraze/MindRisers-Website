@@ -10,5 +10,7 @@ urlpatterns=[
     path('profile_student',views.profile_student,name='profile_student'),
     path('profile_teacher',views.profile_teacher,name='profile_teacher'),
     path('book_tutor',views.book_tutor,name='book_tutor'),
-    path('booking_confirmation',views.booking_confirmation,name='booking_confirmation')
+    path('booking_confirmation',views.booking_confirmation,name='booking_confirmation'),
+    path('paymentGateway',views.paymentGateway,name='paymentGateway'),
+    path('chatapplication',views.chatapplication,name='chatapplication')
 ]

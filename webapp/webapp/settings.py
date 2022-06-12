@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = secrets.SECRET_KEY
-
+RAZOR_KEY_ID = 'rzp_test_AjjsBG7cIqHLIp'
+RAZOR_KEY_SECRET = 'O3k2mii2hu6WKh0wzyLz55Pp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,7 +44,9 @@ INSTALLED_APPS = [
     'django_secrets',
     'basewebsite',
     'chatapplication',
+    'paymentGateway',
     'dashboard',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +80,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'webapp.wsgi.application'
+ASGI_APPLICATION = 'webapp.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        }
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

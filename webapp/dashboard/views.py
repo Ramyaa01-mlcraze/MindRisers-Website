@@ -7,6 +7,10 @@ def student_dashboard(request):
     return render(request,'student.html')
 def teacher_dashboard(request):
     return render(request,'teacher.html')
+def paymentGateway(request):
+    return render(request,'payment.html')
+def chatapplication(request):
+    return render(request,'index.html')
 def book_tutor(request):
     return render(request,'book_tutor.html')   
 def booking_confirmation(request):

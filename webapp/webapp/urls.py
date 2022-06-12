@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test_file',bw.baseHome),
     path('',include('dashboard.urls')),
-    path('',include('chatapplictaion.urls')),
-    path('',include('paymentGateway.urls'))
+    path('',include('paymentGateway.urls')),
+    path('',include('chatapplication.urls'))
 ]
