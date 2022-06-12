@@ -30,3 +30,13 @@ class TeacherDetails(models.Model):
     dept = models.CharField(max_length=100)
     Specialization = models.CharField(max_length=500)
     display_name = models.CharField(max_length=500)
+class BookTutor(models.Model):
+    topic = models.CharField(max_length=100)
+    tutorname = models.CharField(max_length=100)
+    studentname = models.CharField(max_length=100)
+    dateofthesession = models.CharField(max_length=100)
+    starttime = models.CharField(max_length=100)
+    totalduration = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    number = models.CharField(max_length=100)
+    expectation = models.CharField(max_length=100)

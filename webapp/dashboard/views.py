@@ -1,12 +1,27 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import TeacherDetails, User
+from .models import TeacherDetails, User,BookTutor
 
 # Create your views here.
 def student_dashboard(request):
     return render(request,'student.html')
 def teacher_dashboard(request):
     return render(request,'teacher.html')
+def book_tutor(request):
+    return render(request,'book_tutor.html')   
+def booking_confirmation(request):
+    topic=request.POST['topic']
+    tutorname=request.POST['tutorname']
+    studentname=request.POST['studentname']
+    dateofthesession=request.POST['dateofthesession']
+    starttime=request.POST['starttime']
+    totalduration=request.POST['totalduration']
+    email=request.POST['email']
+    number=request.POST['email']
+    expectation=request.POST['expectation']
+    reg = BookTutor(topic=topic,tutorname=tutorname,studentname=studentname,dateofthesession=dateofthesession,starttime=starttime,totalduration=totalduration,email=email,number=number,expectation=expectation)
+    reg.save()
+    return render(request,'booking_confirmation.html')
 def profile_student(request):
     email=request.session['useremail']
     res=User.objects.all()

@@ -8,5 +8,7 @@ urlpatterns=[
     path('student_dashboard',views.student_dashboard,name='student_dashboard'),
     path('teacher_dashboard',views.teacher_dashboard,name='teacher_dashboard'),
     path('profile_student',views.profile_student,name='profile_student'),
-    path('profile_teacher',views.profile_teacher,name='profile_teacher')
+    path('profile_teacher',views.profile_teacher,name='profile_teacher'),
+    path('book_tutor',views.book_tutor,name='book_tutor'),
+    path('booking_confirmation',views.booking_confirmation,name='booking_confirmation')
 ]
